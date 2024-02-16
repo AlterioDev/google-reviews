@@ -1,0 +1,34 @@
+{
+  "name": "alterio/google-reviews",
+  "description": "Google Reviews API connection",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Alterio"
+    }
+  ],
+  "require": {
+    "google/apiclient": "^2.15"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alterio\\GoogleReviews\\": "src/"
+    }
+  },
+  "scripts": {
+    "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+  },
+  "extra": {
+    "google/apiclient-services": [
+      "MyBusinessAccountManagement",
+      "MyBusinessBusinessCalls",
+      "MyBusinessBusinessInformation",
+      "MyBusinessLodging",
+      "MyBusinessNotificationSettings",
+      "MyBusinessPlaceActions",
+      "MyBusinessQA",
+      "MyBusinessVerifications",
+      "SQLAdmin"
+    ]
+  }
+}
